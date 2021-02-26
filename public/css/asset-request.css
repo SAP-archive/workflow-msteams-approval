@@ -1,0 +1,318 @@
+body {
+  background-color: #F9F8F7;
+  font-family: sans-serif;
+}
+
+h1,
+h2 {
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+/**************tile******************/
+.flex-parent {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0.5em 0;
+}
+
+.tile-container {
+  padding: 0;
+  margin: 0;
+  flex-basis: 12.5%;
+}
+
+.tile,
+.tile-total,
+.tile-sent,
+.tile-completed,
+.tile-new {
+  border: #dedede 1px solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  margin: 0.5em;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.tile-total {
+  background-color: #33344A;
+}
+
+.tile-sent {
+  background-color: #7E493B;
+}
+
+.tile-completed {
+  background-color: #498205;
+}
+
+.tile-new {
+  background-color: #6264A7;
+}
+
+/**************Request table******************/
+.div-table {
+  float: left;
+  border-radius: 10px;
+  width: 98%;
+  padding: 1%;
+  background-color: #F9F8F7;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  font-family: sans-serif;
+}
+
+table caption {
+  font-size: 1.0em;
+  color: #252424;
+  margin: .5em 0 .75em;
+  text-align: left;
+}
+
+table tr {
+  padding: .35em;
+  border-bottom: 1px solid #E1DFDD;
+  color: #4A4949;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: left;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+table td {
+  font-size: .8em;
+}
+
+.subject-col {
+  width: 50%;
+}
+
+.status-col {
+  width: 10%;
+  min-width: 80px;
+}
+
+.createdon-col {
+  width: 25%;
+  min-width: 200px;
+}
+
+.requestby-col {
+  width: 15%
+}
+
+/**************modal******************/
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F9F8F7;
+  padding: 1%;
+  width: 40%;
+  border-radius: 0.5rem;
+  text-align: left;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-button {
+  width: 20%;
+  height: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  background-color: #F8333C;
+  border-color: #F8333C;
+  font-size: 2vw;
+}
+
+/**************request form******************/
+.div-form {
+  float: left;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1%;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+  background-image: none;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
+.submit-button,
+.close-button {
+  background-color: #6264A7;
+  float: right;
+  color: white;
+  padding: 8px 10px;
+  margin: 4px 4px;
+  border: none;
+  border-radius: 2px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #6264A7;
+}
+
+.close-button
+ {
+  background-color: #F8333C;
+}
+
+.submit-button:hover, 
+.close-button:hover {
+  background-color: #45a049;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 960px) {
+  .tile-container {
+    flex-basis: 25%;
+    /* 4 column layout */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tile-container {
+    flex-basis: 33.33%;
+    /* 3 column layout */
+  }
+
+  .modal-content {
+    width: 98%;
+  }
+  .div-form {
+    width: 98%;
+  }
+
+  .submit-button,
+  .close-button {
+    width: 45%;
+  }
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.0em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+  }
+
+  table tr {
+    border-bottom: 3px solid #E1DFDD;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #E1DFDD;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  .subject-col,
+  .status-col,
+  .createdon-col,
+  .requestby-col {
+    width: 100%;
+  }
+}
