@@ -1,4 +1,5 @@
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/smb-eats-backend)](https://api.reuse.software/info/github.com/SAP-samples/smb-eats-backend)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/workflow-msteams-approval)](https://api.reuse.software/info/github.com/SAP-samples/workflow-msteams-approval)
+
 [![License: Apache2](https://img.shields.io/badge/License-Apache2-green.svg)](https://opensource.org/licenses/Apache-2.0)
 # Put the collaboration in business context with SAP Workflow Service and Microsoft Teams
 
